@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `IntegralTexture2d` struct in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, IntegralTexture2d">
+
+    <title>glium::texture::IntegralTexture2d - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>glium</a>::<wbr><a href='index.html'>texture</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.CompressedTexture1d.html'>CompressedTexture1d</a><a class='struct ' href='struct.CompressedTexture1dArray.html'>CompressedTexture1dArray</a><a class='struct ' href='struct.CompressedTexture2d.html'>CompressedTexture2d</a><a class='struct ' href='struct.CompressedTexture2dArray.html'>CompressedTexture2dArray</a><a class='struct ' href='struct.CompressedTexture3d.html'>CompressedTexture3d</a><a class='struct ' href='struct.DepthStencilTexture1d.html'>DepthStencilTexture1d</a><a class='struct ' href='struct.DepthStencilTexture1dArray.html'>DepthStencilTexture1dArray</a><a class='struct ' href='struct.DepthStencilTexture2d.html'>DepthStencilTexture2d</a><a class='struct ' href='struct.DepthStencilTexture2dArray.html'>DepthStencilTexture2dArray</a><a class='struct ' href='struct.DepthStencilTexture3d.html'>DepthStencilTexture3d</a><a class='struct ' href='struct.DepthTexture1d.html'>DepthTexture1d</a><a class='struct ' href='struct.DepthTexture1dArray.html'>DepthTexture1dArray</a><a class='struct ' href='struct.DepthTexture2d.html'>DepthTexture2d</a><a class='struct ' href='struct.DepthTexture2dArray.html'>DepthTexture2dArray</a><a class='struct ' href='struct.DepthTexture3d.html'>DepthTexture3d</a><a class='struct ' href='struct.IntegralTexture1d.html'>IntegralTexture1d</a><a class='struct ' href='struct.IntegralTexture1dArray.html'>IntegralTexture1dArray</a><a class='struct current' href='struct.IntegralTexture2d.html'>IntegralTexture2d</a><a class='struct ' href='struct.IntegralTexture2dArray.html'>IntegralTexture2dArray</a><a class='struct ' href='struct.IntegralTexture3d.html'>IntegralTexture3d</a><a class='struct ' href='struct.PixelBuffer.html'>PixelBuffer</a><a class='struct ' href='struct.StencilTexture1d.html'>StencilTexture1d</a><a class='struct ' href='struct.StencilTexture1dArray.html'>StencilTexture1dArray</a><a class='struct ' href='struct.StencilTexture2d.html'>StencilTexture2d</a><a class='struct ' href='struct.StencilTexture2dArray.html'>StencilTexture2dArray</a><a class='struct ' href='struct.StencilTexture3d.html'>StencilTexture3d</a><a class='struct ' href='struct.Texture1d.html'>Texture1d</a><a class='struct ' href='struct.Texture1dArray.html'>Texture1dArray</a><a class='struct ' href='struct.Texture2d.html'>Texture2d</a><a class='struct ' href='struct.Texture2dArray.html'>Texture2dArray</a><a class='struct ' href='struct.Texture3d.html'>Texture3d</a><a class='struct ' href='struct.TextureSurface.html'>TextureSurface</a><a class='struct ' href='struct.UnsignedTexture1d.html'>UnsignedTexture1d</a><a class='struct ' href='struct.UnsignedTexture1dArray.html'>UnsignedTexture1dArray</a><a class='struct ' href='struct.UnsignedTexture2d.html'>UnsignedTexture2d</a><a class='struct ' href='struct.UnsignedTexture2dArray.html'>UnsignedTexture2dArray</a><a class='struct ' href='struct.UnsignedTexture3d.html'>UnsignedTexture3d</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.ClientFormat.html'>ClientFormat</a><a class='enum ' href='enum.CompressedFormat.html'>CompressedFormat</a><a class='enum ' href='enum.DepthFormat.html'>DepthFormat</a><a class='enum ' href='enum.DepthStencilFormat.html'>DepthStencilFormat</a><a class='enum ' href='enum.StencilFormat.html'>StencilFormat</a><a class='enum ' href='enum.TextureFormat.html'>TextureFormat</a><a class='enum ' href='enum.UncompressedFloatFormat.html'>UncompressedFloatFormat</a><a class='enum ' href='enum.UncompressedIntFormat.html'>UncompressedIntFormat</a><a class='enum ' href='enum.UncompressedUintFormat.html'>UncompressedUintFormat</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.PixelValue.html'>PixelValue</a><a class='trait ' href='trait.Texture.html'>Texture</a><a class='trait ' href='trait.Texture1dData.html'>Texture1dData</a><a class='trait ' href='trait.Texture2dData.html'>Texture2dData</a><a class='trait ' href='trait.Texture3dData.html'>Texture3dData</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>glium</a>::<wbr><a href='index.html'>texture</a>::<wbr><a class='struct' href=''>IntegralTexture2d</a><wbr><a class='stability Unstable' title=''>Unstable</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-36625' href='../../src/glium/up/target/build/glium-97a51fd64d277807/out/textures.rs.html#765'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct IntegralTexture2d(_);</pre><div class='docblock'><p>A two-dimensional texture  containing signed integral data.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unstable' title='Unstable'></a><code>impl <a class='struct' href='../../glium/texture/struct.IntegralTexture2d.html' title='glium::texture::IntegralTexture2d'>IntegralTexture2d</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.new' class='fnname'>new</a>&lt;T&gt;(display: &amp;<a class='struct' href='../../glium/struct.Display.html' title='glium::Display'>Display</a>, data: T) -&gt; <a class='struct' href='../../glium/texture/struct.IntegralTexture2d.html' title='glium::texture::IntegralTexture2d'>IntegralTexture2d</a> <span class='where'>where T: <a class='trait' href='../../glium/texture/trait.Texture2dData.html' title='glium::texture::Texture2dData'>Texture2dData</a></span></code></h4>
+<div class='docblock'><p>Builds a new texture by uploading data.</p>
+
+<p>This function will automatically generate all mipmaps of the texture.</p>
+</div><h4 id='method.new_empty' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.new_empty' class='fnname'>new_empty</a>(display: &amp;<a class='struct' href='../../glium/struct.Display.html' title='glium::Display'>Display</a>, format: <a class='enum' href='../../glium/texture/enum.UncompressedIntFormat.html' title='glium::texture::UncompressedIntFormat'>UncompressedIntFormat</a>, width: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, height: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='../../glium/texture/struct.IntegralTexture2d.html' title='glium::texture::IntegralTexture2d'>IntegralTexture2d</a></code></h4>
+<div class='docblock'><p>Creates an empty texture.</p>
+
+<p>The texture will contain undefined data.</p>
+</div><h4 id='method.read' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.read' class='fnname'>read</a>&lt;P, T&gt;(&amp;self) -&gt; T <span class='where'>where T: <a class='trait' href='../../glium/texture/trait.Texture2dData.html' title='glium::texture::Texture2dData'>Texture2dData</a>, P: <a class='trait' href='../../glium/texture/trait.PixelValue.html' title='glium::texture::PixelValue'>PixelValue</a></span></code></h4>
+<div class='docblock'><p>Reads the content of the texture.</p>
+
+<h1 id="features" class='section-header'><a
+                           href="#features">Features</a></h1>
+<p>This method is always only if the <code>gl_extensions</code> feature is enabled.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unstable' title='Unstable'></a><code>impl <a class='trait' href='../../glium/texture/trait.Texture.html' title='glium::texture::Texture'>Texture</a> for <a class='struct' href='../../glium/texture/struct.IntegralTexture2d.html' title='glium::texture::IntegralTexture2d'>IntegralTexture2d</a></code></h3><div class='impl-items'><h4 id='method.get_width' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.get_width' class='fnname'>get_width</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.get_height' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.get_height' class='fnname'>get_height</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+<h4 id='method.get_depth' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.get_depth' class='fnname'>get_depth</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+<h4 id='method.get_array_size' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.get_array_size' class='fnname'>get_array_size</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+</div><h3 class='impl'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Show.html' title='core::fmt::Show'>Show</a> for <a class='struct' href='../../glium/texture/struct.IntegralTexture2d.html' title='glium::texture::IntegralTexture2d'>IntegralTexture2d</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Error.html' title='core::fmt::Error'>Error</a>&gt;</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "glium";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

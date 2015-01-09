@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `UniformType` enum in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, UniformType">
+
+    <title>glium::uniforms::UniformType - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>glium</a>::<wbr><a href='index.html'>uniforms</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.EmptyUniforms.html'>EmptyUniforms</a><a class='struct ' href='struct.Sampler.html'>Sampler</a><a class='struct ' href='struct.SamplerBehavior.html'>SamplerBehavior</a><a class='struct ' href='struct.UniformsStorage.html'>UniformsStorage</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.MagnifySamplerFilter.html'>MagnifySamplerFilter</a><a class='enum ' href='enum.MinifySamplerFilter.html'>MinifySamplerFilter</a><a class='enum ' href='enum.SamplerWrapFunction.html'>SamplerWrapFunction</a><a class='enum current' href='enum.UniformType.html'>UniformType</a><a class='enum ' href='enum.UniformValue.html'>UniformValue</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.IntoUniformValue.html'>IntoUniformValue</a><a class='trait ' href='trait.Uniforms.html'>Uniforms</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>glium</a>::<wbr><a href='index.html'>uniforms</a>::<wbr><a class='enum' href=''>UniformType</a><wbr><a class='stability Unstable' title=''>Unstable</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-9055' href='../../src/glium/uniforms/value.rs.html#12-122'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum UniformType {
+    Float,
+    FloatVec2,
+    FloatVec3,
+    FloatVec4,
+    Double,
+    DoubleVec2,
+    DoubleVec3,
+    DoubleVec4,
+    Int,
+    IntVec2,
+    IntVec3,
+    IntVec4,
+    UnsignedInt,
+    UnsignedIntVec2,
+    UnsignedIntVec3,
+    UnsignedIntVec4,
+    Bool,
+    BoolVec2,
+    BoolVec3,
+    BoolVec4,
+    FloatMat2,
+    FloatMat3,
+    FloatMat4,
+    FloatMat2x3,
+    FloatMat2x4,
+    FloatMat3x2,
+    FloatMat3x4,
+    FloatMat4x2,
+    FloatMat4x3,
+    DoubleMat2,
+    DoubleMat3,
+    DoubleMat4,
+    DoubleMat2x3,
+    DoubleMat2x4,
+    DoubleMat3x2,
+    DoubleMat3x4,
+    DoubleMat4x2,
+    DoubleMat4x3,
+    Sampler1d,
+    ISampler1d,
+    USampler1d,
+    Sampler2d,
+    ISampler2d,
+    USampler2d,
+    Sampler3d,
+    ISampler3d,
+    USampler3d,
+    Sampler1dArray,
+    ISampler1dArray,
+    USampler1dArray,
+    Sampler2dArray,
+    ISampler2dArray,
+    USampler2dArray,
+    SamplerCube,
+    ISamplerCube,
+    USamplerCube,
+    Sampler2dRect,
+    ISampler2dRect,
+    USampler2dRect,
+    Sampler2dRectShadow,
+    SamplerCubeArray,
+    ISamplerCubeArray,
+    USamplerCubeArray,
+    SamplerBuffer,
+    ISamplerBuffer,
+    USamplerBuffer,
+    Sampler2dMultisample,
+    ISampler2dMultisample,
+    USampler2dMultisample,
+    Sampler2dMultisampleArray,
+    ISampler2dMultisampleArray,
+    USampler2dMultisampleArray,
+    Sampler1dShadow,
+    Sampler2dShadow,
+    SamplerCubeShadow,
+    Sampler1dArrayShadow,
+    Sampler2dArrayShadow,
+    SamplerCubeArrayShadow,
+    Image1d,
+    IImage1d,
+    UImage1d,
+    Image2d,
+    IImage2d,
+    UImage2d,
+    Image3d,
+    IImage3d,
+    UImage3d,
+    Image2dRect,
+    IImage2dRect,
+    UImage2dRect,
+    ImageCube,
+    IImageCube,
+    UImageCube,
+    ImageBuffer,
+    IImageBuffer,
+    UImageBuffer,
+    Image1dArray,
+    IImage1dArray,
+    UImage1dArray,
+    Image2dArray,
+    IImage2dArray,
+    UImage2dArray,
+    Image2dMultisample,
+    IImage2dMultisample,
+    UImage2dMultisample,
+    Image2dMultisampleArray,
+    IImage2dMultisampleArray,
+    UImage2dMultisampleArray,
+    AtomicCounterUint,
+}</pre><div class='docblock'><p>Type of a uniform in a program.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Float'><a class='stability Unstable' title='Unstable'></a><code>Float</code></td><td></td></tr><tr><td id='variant.FloatVec2'><a class='stability Unstable' title='Unstable'></a><code>FloatVec2</code></td><td></td></tr><tr><td id='variant.FloatVec3'><a class='stability Unstable' title='Unstable'></a><code>FloatVec3</code></td><td></td></tr><tr><td id='variant.FloatVec4'><a class='stability Unstable' title='Unstable'></a><code>FloatVec4</code></td><td></td></tr><tr><td id='variant.Double'><a class='stability Unstable' title='Unstable'></a><code>Double</code></td><td></td></tr><tr><td id='variant.DoubleVec2'><a class='stability Unstable' title='Unstable'></a><code>DoubleVec2</code></td><td></td></tr><tr><td id='variant.DoubleVec3'><a class='stability Unstable' title='Unstable'></a><code>DoubleVec3</code></td><td></td></tr><tr><td id='variant.DoubleVec4'><a class='stability Unstable' title='Unstable'></a><code>DoubleVec4</code></td><td></td></tr><tr><td id='variant.Int'><a class='stability Unstable' title='Unstable'></a><code>Int</code></td><td></td></tr><tr><td id='variant.IntVec2'><a class='stability Unstable' title='Unstable'></a><code>IntVec2</code></td><td></td></tr><tr><td id='variant.IntVec3'><a class='stability Unstable' title='Unstable'></a><code>IntVec3</code></td><td></td></tr><tr><td id='variant.IntVec4'><a class='stability Unstable' title='Unstable'></a><code>IntVec4</code></td><td></td></tr><tr><td id='variant.UnsignedInt'><a class='stability Unstable' title='Unstable'></a><code>UnsignedInt</code></td><td></td></tr><tr><td id='variant.UnsignedIntVec2'><a class='stability Unstable' title='Unstable'></a><code>UnsignedIntVec2</code></td><td></td></tr><tr><td id='variant.UnsignedIntVec3'><a class='stability Unstable' title='Unstable'></a><code>UnsignedIntVec3</code></td><td></td></tr><tr><td id='variant.UnsignedIntVec4'><a class='stability Unstable' title='Unstable'></a><code>UnsignedIntVec4</code></td><td></td></tr><tr><td id='variant.Bool'><a class='stability Unstable' title='Unstable'></a><code>Bool</code></td><td></td></tr><tr><td id='variant.BoolVec2'><a class='stability Unstable' title='Unstable'></a><code>BoolVec2</code></td><td></td></tr><tr><td id='variant.BoolVec3'><a class='stability Unstable' title='Unstable'></a><code>BoolVec3</code></td><td></td></tr><tr><td id='variant.BoolVec4'><a class='stability Unstable' title='Unstable'></a><code>BoolVec4</code></td><td></td></tr><tr><td id='variant.FloatMat2'><a class='stability Unstable' title='Unstable'></a><code>FloatMat2</code></td><td></td></tr><tr><td id='variant.FloatMat3'><a class='stability Unstable' title='Unstable'></a><code>FloatMat3</code></td><td></td></tr><tr><td id='variant.FloatMat4'><a class='stability Unstable' title='Unstable'></a><code>FloatMat4</code></td><td></td></tr><tr><td id='variant.FloatMat2x3'><a class='stability Unstable' title='Unstable'></a><code>FloatMat2x3</code></td><td></td></tr><tr><td id='variant.FloatMat2x4'><a class='stability Unstable' title='Unstable'></a><code>FloatMat2x4</code></td><td></td></tr><tr><td id='variant.FloatMat3x2'><a class='stability Unstable' title='Unstable'></a><code>FloatMat3x2</code></td><td></td></tr><tr><td id='variant.FloatMat3x4'><a class='stability Unstable' title='Unstable'></a><code>FloatMat3x4</code></td><td></td></tr><tr><td id='variant.FloatMat4x2'><a class='stability Unstable' title='Unstable'></a><code>FloatMat4x2</code></td><td></td></tr><tr><td id='variant.FloatMat4x3'><a class='stability Unstable' title='Unstable'></a><code>FloatMat4x3</code></td><td></td></tr><tr><td id='variant.DoubleMat2'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat2</code></td><td></td></tr><tr><td id='variant.DoubleMat3'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat3</code></td><td></td></tr><tr><td id='variant.DoubleMat4'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat4</code></td><td></td></tr><tr><td id='variant.DoubleMat2x3'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat2x3</code></td><td></td></tr><tr><td id='variant.DoubleMat2x4'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat2x4</code></td><td></td></tr><tr><td id='variant.DoubleMat3x2'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat3x2</code></td><td></td></tr><tr><td id='variant.DoubleMat3x4'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat3x4</code></td><td></td></tr><tr><td id='variant.DoubleMat4x2'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat4x2</code></td><td></td></tr><tr><td id='variant.DoubleMat4x3'><a class='stability Unstable' title='Unstable'></a><code>DoubleMat4x3</code></td><td></td></tr><tr><td id='variant.Sampler1d'><a class='stability Unstable' title='Unstable'></a><code>Sampler1d</code></td><td></td></tr><tr><td id='variant.ISampler1d'><a class='stability Unstable' title='Unstable'></a><code>ISampler1d</code></td><td></td></tr><tr><td id='variant.USampler1d'><a class='stability Unstable' title='Unstable'></a><code>USampler1d</code></td><td></td></tr><tr><td id='variant.Sampler2d'><a class='stability Unstable' title='Unstable'></a><code>Sampler2d</code></td><td></td></tr><tr><td id='variant.ISampler2d'><a class='stability Unstable' title='Unstable'></a><code>ISampler2d</code></td><td></td></tr><tr><td id='variant.USampler2d'><a class='stability Unstable' title='Unstable'></a><code>USampler2d</code></td><td></td></tr><tr><td id='variant.Sampler3d'><a class='stability Unstable' title='Unstable'></a><code>Sampler3d</code></td><td></td></tr><tr><td id='variant.ISampler3d'><a class='stability Unstable' title='Unstable'></a><code>ISampler3d</code></td><td></td></tr><tr><td id='variant.USampler3d'><a class='stability Unstable' title='Unstable'></a><code>USampler3d</code></td><td></td></tr><tr><td id='variant.Sampler1dArray'><a class='stability Unstable' title='Unstable'></a><code>Sampler1dArray</code></td><td></td></tr><tr><td id='variant.ISampler1dArray'><a class='stability Unstable' title='Unstable'></a><code>ISampler1dArray</code></td><td></td></tr><tr><td id='variant.USampler1dArray'><a class='stability Unstable' title='Unstable'></a><code>USampler1dArray</code></td><td></td></tr><tr><td id='variant.Sampler2dArray'><a class='stability Unstable' title='Unstable'></a><code>Sampler2dArray</code></td><td></td></tr><tr><td id='variant.ISampler2dArray'><a class='stability Unstable' title='Unstable'></a><code>ISampler2dArray</code></td><td></td></tr><tr><td id='variant.USampler2dArray'><a class='stability Unstable' title='Unstable'></a><code>USampler2dArray</code></td><td></td></tr><tr><td id='variant.SamplerCube'><a class='stability Unstable' title='Unstable'></a><code>SamplerCube</code></td><td></td></tr><tr><td id='variant.ISamplerCube'><a class='stability Unstable' title='Unstable'></a><code>ISamplerCube</code></td><td></td></tr><tr><td id='variant.USamplerCube'><a class='stability Unstable' title='Unstable'></a><code>USamplerCube</code></td><td></td></tr><tr><td id='variant.Sampler2dRect'><a class='stability Unstable' title='Unstable'></a><code>Sampler2dRect</code></td><td></td></tr><tr><td id='variant.ISampler2dRect'><a class='stability Unstable' title='Unstable'></a><code>ISampler2dRect</code></td><td></td></tr><tr><td id='variant.USampler2dRect'><a class='stability Unstable' title='Unstable'></a><code>USampler2dRect</code></td><td></td></tr><tr><td id='variant.Sampler2dRectShadow'><a class='stability Unstable' title='Unstable'></a><code>Sampler2dRectShadow</code></td><td></td></tr><tr><td id='variant.SamplerCubeArray'><a class='stability Unstable' title='Unstable'></a><code>SamplerCubeArray</code></td><td></td></tr><tr><td id='variant.ISamplerCubeArray'><a class='stability Unstable' title='Unstable'></a><code>ISamplerCubeArray</code></td><td></td></tr><tr><td id='variant.USamplerCubeArray'><a class='stability Unstable' title='Unstable'></a><code>USamplerCubeArray</code></td><td></td></tr><tr><td id='variant.SamplerBuffer'><a class='stability Unstable' title='Unstable'></a><code>SamplerBuffer</code></td><td></td></tr><tr><td id='variant.ISamplerBuffer'><a class='stability Unstable' title='Unstable'></a><code>ISamplerBuffer</code></td><td></td></tr><tr><td id='variant.USamplerBuffer'><a class='stability Unstable' title='Unstable'></a><code>USamplerBuffer</code></td><td></td></tr><tr><td id='variant.Sampler2dMultisample'><a class='stability Unstable' title='Unstable'></a><code>Sampler2dMultisample</code></td><td></td></tr><tr><td id='variant.ISampler2dMultisample'><a class='stability Unstable' title='Unstable'></a><code>ISampler2dMultisample</code></td><td></td></tr><tr><td id='variant.USampler2dMultisample'><a class='stability Unstable' title='Unstable'></a><code>USampler2dMultisample</code></td><td></td></tr><tr><td id='variant.Sampler2dMultisampleArray'><a class='stability Unstable' title='Unstable'></a><code>Sampler2dMultisampleArray</code></td><td></td></tr><tr><td id='variant.ISampler2dMultisampleArray'><a class='stability Unstable' title='Unstable'></a><code>ISampler2dMultisampleArray</code></td><td></td></tr><tr><td id='variant.USampler2dMultisampleArray'><a class='stability Unstable' title='Unstable'></a><code>USampler2dMultisampleArray</code></td><td></td></tr><tr><td id='variant.Sampler1dShadow'><a class='stability Unstable' title='Unstable'></a><code>Sampler1dShadow</code></td><td></td></tr><tr><td id='variant.Sampler2dShadow'><a class='stability Unstable' title='Unstable'></a><code>Sampler2dShadow</code></td><td></td></tr><tr><td id='variant.SamplerCubeShadow'><a class='stability Unstable' title='Unstable'></a><code>SamplerCubeShadow</code></td><td></td></tr><tr><td id='variant.Sampler1dArrayShadow'><a class='stability Unstable' title='Unstable'></a><code>Sampler1dArrayShadow</code></td><td></td></tr><tr><td id='variant.Sampler2dArrayShadow'><a class='stability Unstable' title='Unstable'></a><code>Sampler2dArrayShadow</code></td><td></td></tr><tr><td id='variant.SamplerCubeArrayShadow'><a class='stability Unstable' title='Unstable'></a><code>SamplerCubeArrayShadow</code></td><td></td></tr><tr><td id='variant.Image1d'><a class='stability Unstable' title='Unstable'></a><code>Image1d</code></td><td></td></tr><tr><td id='variant.IImage1d'><a class='stability Unstable' title='Unstable'></a><code>IImage1d</code></td><td></td></tr><tr><td id='variant.UImage1d'><a class='stability Unstable' title='Unstable'></a><code>UImage1d</code></td><td></td></tr><tr><td id='variant.Image2d'><a class='stability Unstable' title='Unstable'></a><code>Image2d</code></td><td></td></tr><tr><td id='variant.IImage2d'><a class='stability Unstable' title='Unstable'></a><code>IImage2d</code></td><td></td></tr><tr><td id='variant.UImage2d'><a class='stability Unstable' title='Unstable'></a><code>UImage2d</code></td><td></td></tr><tr><td id='variant.Image3d'><a class='stability Unstable' title='Unstable'></a><code>Image3d</code></td><td></td></tr><tr><td id='variant.IImage3d'><a class='stability Unstable' title='Unstable'></a><code>IImage3d</code></td><td></td></tr><tr><td id='variant.UImage3d'><a class='stability Unstable' title='Unstable'></a><code>UImage3d</code></td><td></td></tr><tr><td id='variant.Image2dRect'><a class='stability Unstable' title='Unstable'></a><code>Image2dRect</code></td><td></td></tr><tr><td id='variant.IImage2dRect'><a class='stability Unstable' title='Unstable'></a><code>IImage2dRect</code></td><td></td></tr><tr><td id='variant.UImage2dRect'><a class='stability Unstable' title='Unstable'></a><code>UImage2dRect</code></td><td></td></tr><tr><td id='variant.ImageCube'><a class='stability Unstable' title='Unstable'></a><code>ImageCube</code></td><td></td></tr><tr><td id='variant.IImageCube'><a class='stability Unstable' title='Unstable'></a><code>IImageCube</code></td><td></td></tr><tr><td id='variant.UImageCube'><a class='stability Unstable' title='Unstable'></a><code>UImageCube</code></td><td></td></tr><tr><td id='variant.ImageBuffer'><a class='stability Unstable' title='Unstable'></a><code>ImageBuffer</code></td><td></td></tr><tr><td id='variant.IImageBuffer'><a class='stability Unstable' title='Unstable'></a><code>IImageBuffer</code></td><td></td></tr><tr><td id='variant.UImageBuffer'><a class='stability Unstable' title='Unstable'></a><code>UImageBuffer</code></td><td></td></tr><tr><td id='variant.Image1dArray'><a class='stability Unstable' title='Unstable'></a><code>Image1dArray</code></td><td></td></tr><tr><td id='variant.IImage1dArray'><a class='stability Unstable' title='Unstable'></a><code>IImage1dArray</code></td><td></td></tr><tr><td id='variant.UImage1dArray'><a class='stability Unstable' title='Unstable'></a><code>UImage1dArray</code></td><td></td></tr><tr><td id='variant.Image2dArray'><a class='stability Unstable' title='Unstable'></a><code>Image2dArray</code></td><td></td></tr><tr><td id='variant.IImage2dArray'><a class='stability Unstable' title='Unstable'></a><code>IImage2dArray</code></td><td></td></tr><tr><td id='variant.UImage2dArray'><a class='stability Unstable' title='Unstable'></a><code>UImage2dArray</code></td><td></td></tr><tr><td id='variant.Image2dMultisample'><a class='stability Unstable' title='Unstable'></a><code>Image2dMultisample</code></td><td></td></tr><tr><td id='variant.IImage2dMultisample'><a class='stability Unstable' title='Unstable'></a><code>IImage2dMultisample</code></td><td></td></tr><tr><td id='variant.UImage2dMultisample'><a class='stability Unstable' title='Unstable'></a><code>UImage2dMultisample</code></td><td></td></tr><tr><td id='variant.Image2dMultisampleArray'><a class='stability Unstable' title='Unstable'></a><code>Image2dMultisampleArray</code></td><td></td></tr><tr><td id='variant.IImage2dMultisampleArray'><a class='stability Unstable' title='Unstable'></a><code>IImage2dMultisampleArray</code></td><td></td></tr><tr><td id='variant.UImage2dMultisampleArray'><a class='stability Unstable' title='Unstable'></a><code>UImage2dMultisampleArray</code></td><td></td></tr><tr><td id='variant.AtomicCounterUint'><a class='stability Unstable' title='Unstable'></a><code>AtomicCounterUint</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a></code></h3><div class='impl-items'><h4 id='method.assert_receiver_is_total_eq' class='tymethod'><a class='stability Experimental' title='Experimental'></a><code>fn <a href='#tymethod.assert_receiver_is_total_eq' class='fnname'>assert_receiver_is_total_eq</a>(&amp;self)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Show.html' title='core::fmt::Show'>Show</a> for <a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a></code></h4>
+<h4 id='method.clone_from' class='tymethod'><a class='stability Unstable' title='Unstable: this function is rarely used'></a><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><a class='stability Experimental' title='Experimental'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/kinds/trait.Copy.html' title='core::kinds::Copy'>Copy</a> for <a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a></code></h3><div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "glium";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

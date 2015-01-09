@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `FixedArray` trait in crate `cgmath`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, FixedArray">
+
+    <title>cgmath::FixedArray - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>cgmath</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Aabb2.html'>Aabb2</a><a class='struct ' href='struct.Aabb3.html'>Aabb3</a><a class='struct ' href='struct.AffineMatrix3.html'>AffineMatrix3</a><a class='struct ' href='struct.Basis2.html'>Basis2</a><a class='struct ' href='struct.Basis3.html'>Basis3</a><a class='struct ' href='struct.Cylinder.html'>Cylinder</a><a class='struct ' href='struct.Decomposed.html'>Decomposed</a><a class='struct ' href='struct.Deg.html'>Deg</a><a class='struct ' href='struct.Frustum.html'>Frustum</a><a class='struct ' href='struct.FrustumPoints.html'>FrustumPoints</a><a class='struct ' href='struct.Line.html'>Line</a><a class='struct ' href='struct.Matrix2.html'>Matrix2</a><a class='struct ' href='struct.Matrix3.html'>Matrix3</a><a class='struct ' href='struct.Matrix4.html'>Matrix4</a><a class='struct ' href='struct.Obb2.html'>Obb2</a><a class='struct ' href='struct.Obb3.html'>Obb3</a><a class='struct ' href='struct.Ortho.html'>Ortho</a><a class='struct ' href='struct.Perspective.html'>Perspective</a><a class='struct ' href='struct.PerspectiveFov.html'>PerspectiveFov</a><a class='struct ' href='struct.Plane.html'>Plane</a><a class='struct ' href='struct.Point2.html'>Point2</a><a class='struct ' href='struct.Point3.html'>Point3</a><a class='struct ' href='struct.Quaternion.html'>Quaternion</a><a class='struct ' href='struct.Rad.html'>Rad</a><a class='struct ' href='struct.Ray.html'>Ray</a><a class='struct ' href='struct.Sphere.html'>Sphere</a><a class='struct ' href='struct.Vector2.html'>Vector2</a><a class='struct ' href='struct.Vector3.html'>Vector3</a><a class='struct ' href='struct.Vector4.html'>Vector4</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.Aabb.html'>Aabb</a><a class='trait ' href='trait.Angle.html'>Angle</a><a class='trait ' href='trait.ApproxEq.html'>ApproxEq</a><a class='trait ' href='trait.Array1.html'>Array1</a><a class='trait ' href='trait.Array2.html'>Array2</a><a class='trait ' href='trait.BaseFloat.html'>BaseFloat</a><a class='trait ' href='trait.BaseInt.html'>BaseInt</a><a class='trait ' href='trait.BaseNum.html'>BaseNum</a><a class='trait ' href='trait.EuclideanVector.html'>EuclideanVector</a><a class='trait current' href='trait.FixedArray.html'>FixedArray</a><a class='trait ' href='trait.Intersect.html'>Intersect</a><a class='trait ' href='trait.Matrix.html'>Matrix</a><a class='trait ' href='trait.One.html'>One</a><a class='trait ' href='trait.PartialOrd.html'>PartialOrd</a><a class='trait ' href='trait.Point.html'>Point</a><a class='trait ' href='trait.Projection.html'>Projection</a><a class='trait ' href='trait.Rotation.html'>Rotation</a><a class='trait ' href='trait.Rotation2.html'>Rotation2</a><a class='trait ' href='trait.Rotation3.html'>Rotation3</a><a class='trait ' href='trait.ToBasis2.html'>ToBasis2</a><a class='trait ' href='trait.ToBasis3.html'>ToBasis3</a><a class='trait ' href='trait.ToDeg.html'>ToDeg</a><a class='trait ' href='trait.ToMatrix2.html'>ToMatrix2</a><a class='trait ' href='trait.ToMatrix3.html'>ToMatrix3</a><a class='trait ' href='trait.ToMatrix4.html'>ToMatrix4</a><a class='trait ' href='trait.ToQuaternion.html'>ToQuaternion</a><a class='trait ' href='trait.ToRad.html'>ToRad</a><a class='trait ' href='trait.Transform.html'>Transform</a><a class='trait ' href='trait.Transform3.html'>Transform3</a><a class='trait ' href='trait.Vector.html'>Vector</a><a class='trait ' href='trait.Zero.html'>Zero</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.acos.html'>acos</a><a class='fn ' href='fn.asin.html'>asin</a><a class='fn ' href='fn.atan.html'>atan</a><a class='fn ' href='fn.atan2.html'>atan2</a><a class='fn ' href='fn.bisect.html'>bisect</a><a class='fn ' href='fn.cos.html'>cos</a><a class='fn ' href='fn.cot.html'>cot</a><a class='fn ' href='fn.csc.html'>csc</a><a class='fn ' href='fn.deg.html'>deg</a><a class='fn ' href='fn.dot.html'>dot</a><a class='fn ' href='fn.frustum.html'>frustum</a><a class='fn ' href='fn.one.html'>one</a><a class='fn ' href='fn.ortho.html'>ortho</a><a class='fn ' href='fn.perspective.html'>perspective</a><a class='fn ' href='fn.rad.html'>rad</a><a class='fn ' href='fn.sec.html'>sec</a><a class='fn ' href='fn.sin.html'>sin</a><a class='fn ' href='fn.sin_cos.html'>sin_cos</a><a class='fn ' href='fn.tan.html'>tan</a><a class='fn ' href='fn.zero.html'>zero</a></div><div class='block macro'><h2>Macros</h2><a class='macro ' href='macro.assert_approx_eq!.html'>assert_approx_eq!</a><a class='macro ' href='macro.assert_approx_eq_eps!.html'>assert_approx_eq_eps!</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>cgmath</a>::<wbr><a class='trait' href=''>FixedArray</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-469' href='../src/cgmath/array.rs.html#96-103'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait FixedArray&lt;V&gt; {
+    fn <a href='#tymethod.into_fixed' class='fnname'>into_fixed</a>(self) -&gt; V;
+    fn <a href='#tymethod.as_fixed' class='fnname'>as_fixed</a>&lt;'a&gt;(&amp;'a self) -&gt; &amp;'a V;
+    fn <a href='#tymethod.as_mut_fixed' class='fnname'>as_mut_fixed</a>&lt;'a&gt;(&amp;'a mut self) -&gt; &amp;'a mut V;
+    fn <a href='#tymethod.from_fixed' class='fnname'>from_fixed</a>(v: V) -&gt; Self;
+    fn <a href='#tymethod.from_fixed_ref' class='fnname'>from_fixed_ref</a>&lt;'a&gt;(v: &amp;'a V) -&gt; &amp;'a Self;
+    fn <a href='#tymethod.from_fixed_mut' class='fnname'>from_fixed_mut</a>&lt;'a&gt;(v: &amp;'a mut V) -&gt; &amp;'a mut Self;
+}</pre><div class='docblock'><p>Homogeneous arrays of elements that can be converted to and from <code>[T, ..N]</code>
+arrays.</p>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.into_fixed' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.into_fixed' class='fnname'>into_fixed</a>(self) -&gt; V</code></h3><h3 id='tymethod.as_fixed' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.as_fixed' class='fnname'>as_fixed</a>&lt;'a&gt;(&amp;'a self) -&gt; &amp;'a V</code></h3><h3 id='tymethod.as_mut_fixed' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.as_mut_fixed' class='fnname'>as_mut_fixed</a>&lt;'a&gt;(&amp;'a mut self) -&gt; &amp;'a mut V</code></h3><h3 id='tymethod.from_fixed' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.from_fixed' class='fnname'>from_fixed</a>(v: V) -&gt; Self</code></h3><h3 id='tymethod.from_fixed_ref' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.from_fixed_ref' class='fnname'>from_fixed_ref</a>&lt;'a&gt;(v: &amp;'a V) -&gt; &amp;'a Self</code></h3><h3 id='tymethod.from_fixed_mut' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.from_fixed_mut' class='fnname'>from_fixed_mut</a>&lt;'a&gt;(v: &amp;'a mut V) -&gt; &amp;'a mut Self</code></h3></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;S&gt; <a class='trait' href='../cgmath/trait.FixedArray.html' title='cgmath::FixedArray'>FixedArray</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[S, ..2]</a>, ..2]</a>&gt; for <a class='struct' href='../cgmath/struct.Matrix2.html' title='cgmath::Matrix2'>Matrix2</a>&lt;S&gt;</code></li>
+<li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;S&gt; <a class='trait' href='../cgmath/trait.FixedArray.html' title='cgmath::FixedArray'>FixedArray</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[S, ..3]</a>, ..3]</a>&gt; for <a class='struct' href='../cgmath/struct.Matrix3.html' title='cgmath::Matrix3'>Matrix3</a>&lt;S&gt;</code></li>
+<li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;S&gt; <a class='trait' href='../cgmath/trait.FixedArray.html' title='cgmath::FixedArray'>FixedArray</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[S, ..4]</a>, ..4]</a>&gt; for <a class='struct' href='../cgmath/struct.Matrix4.html' title='cgmath::Matrix4'>Matrix4</a>&lt;S&gt;</code></li>
+<li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;S&gt; <a class='trait' href='../cgmath/trait.FixedArray.html' title='cgmath::FixedArray'>FixedArray</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[S, ..2]</a>&gt; for <a class='struct' href='../cgmath/struct.Vector2.html' title='cgmath::Vector2'>Vector2</a>&lt;S&gt;</code></li>
+<li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;S&gt; <a class='trait' href='../cgmath/trait.FixedArray.html' title='cgmath::FixedArray'>FixedArray</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[S, ..3]</a>&gt; for <a class='struct' href='../cgmath/struct.Vector3.html' title='cgmath::Vector3'>Vector3</a>&lt;S&gt;</code></li>
+<li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;S&gt; <a class='trait' href='../cgmath/trait.FixedArray.html' title='cgmath::FixedArray'>FixedArray</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[S, ..4]</a>&gt; for <a class='struct' href='../cgmath/struct.Vector4.html' title='cgmath::Vector4'>Vector4</a>&lt;S&gt;</code></li>
+<li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;S&gt; <a class='trait' href='../cgmath/trait.FixedArray.html' title='cgmath::FixedArray'>FixedArray</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[S, ..2]</a>&gt; for <a class='struct' href='../cgmath/struct.Point2.html' title='cgmath::Point2'>Point2</a>&lt;S&gt;</code></li>
+<li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;S&gt; <a class='trait' href='../cgmath/trait.FixedArray.html' title='cgmath::FixedArray'>FixedArray</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[S, ..3]</a>&gt; for <a class='struct' href='../cgmath/struct.Point3.html' title='cgmath::Point3'>Point3</a>&lt;S&gt;</code></li>
+</ul><script type="text/javascript" async
+                              src="../implementors/cgmath/trait.FixedArray.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "cgmath";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

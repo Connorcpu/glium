@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `UniformValue` enum in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, UniformValue">
+
+    <title>glium::uniforms::UniformValue - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>glium</a>::<wbr><a href='index.html'>uniforms</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.EmptyUniforms.html'>EmptyUniforms</a><a class='struct ' href='struct.Sampler.html'>Sampler</a><a class='struct ' href='struct.SamplerBehavior.html'>SamplerBehavior</a><a class='struct ' href='struct.UniformsStorage.html'>UniformsStorage</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.MagnifySamplerFilter.html'>MagnifySamplerFilter</a><a class='enum ' href='enum.MinifySamplerFilter.html'>MinifySamplerFilter</a><a class='enum ' href='enum.SamplerWrapFunction.html'>SamplerWrapFunction</a><a class='enum ' href='enum.UniformType.html'>UniformType</a><a class='enum current' href='enum.UniformValue.html'>UniformValue</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.IntoUniformValue.html'>IntoUniformValue</a><a class='trait ' href='trait.Uniforms.html'>Uniforms</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>glium</a>::<wbr><a href='index.html'>uniforms</a>::<wbr><a class='enum' href=''>UniformValue</a><wbr><a class='stability Unstable' title=''>Unstable</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-15423' href='../../src/glium/uniforms/value.rs.html#133-171'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum UniformValue&lt;'a&gt; {
+    SignedInt(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>),
+    UnsignedInt(<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>),
+    Float(<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>),
+    Mat2(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, ..2]</a>, ..2]</a>),
+    Mat3(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, ..3]</a>, ..3]</a>),
+    Mat4(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, ..4]</a>, ..4]</a>),
+    Vec2(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, ..2]</a>),
+    Vec3(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, ..3]</a>),
+    Vec4(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, ..4]</a>),
+    Texture1d(&amp;'a <a class='struct' href='../../glium/texture/struct.Texture1d.html' title='glium::texture::Texture1d'>Texture1d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    CompressedTexture1d(&amp;'a <a class='struct' href='../../glium/texture/struct.CompressedTexture1d.html' title='glium::texture::CompressedTexture1d'>CompressedTexture1d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    IntegralTexture1d(&amp;'a <a class='struct' href='../../glium/texture/struct.IntegralTexture1d.html' title='glium::texture::IntegralTexture1d'>IntegralTexture1d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    UnsignedTexture1d(&amp;'a <a class='struct' href='../../glium/texture/struct.UnsignedTexture1d.html' title='glium::texture::UnsignedTexture1d'>UnsignedTexture1d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    DepthTexture1d(&amp;'a <a class='struct' href='../../glium/texture/struct.DepthTexture1d.html' title='glium::texture::DepthTexture1d'>DepthTexture1d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    Texture2d(&amp;'a <a class='struct' href='../../glium/texture/struct.Texture2d.html' title='glium::texture::Texture2d'>Texture2d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    CompressedTexture2d(&amp;'a <a class='struct' href='../../glium/texture/struct.CompressedTexture2d.html' title='glium::texture::CompressedTexture2d'>CompressedTexture2d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    IntegralTexture2d(&amp;'a <a class='struct' href='../../glium/texture/struct.IntegralTexture2d.html' title='glium::texture::IntegralTexture2d'>IntegralTexture2d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    UnsignedTexture2d(&amp;'a <a class='struct' href='../../glium/texture/struct.UnsignedTexture2d.html' title='glium::texture::UnsignedTexture2d'>UnsignedTexture2d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    DepthTexture2d(&amp;'a <a class='struct' href='../../glium/texture/struct.DepthTexture2d.html' title='glium::texture::DepthTexture2d'>DepthTexture2d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    Texture3d(&amp;'a <a class='struct' href='../../glium/texture/struct.Texture3d.html' title='glium::texture::Texture3d'>Texture3d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    CompressedTexture3d(&amp;'a <a class='struct' href='../../glium/texture/struct.CompressedTexture3d.html' title='glium::texture::CompressedTexture3d'>CompressedTexture3d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    IntegralTexture3d(&amp;'a <a class='struct' href='../../glium/texture/struct.IntegralTexture3d.html' title='glium::texture::IntegralTexture3d'>IntegralTexture3d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    UnsignedTexture3d(&amp;'a <a class='struct' href='../../glium/texture/struct.UnsignedTexture3d.html' title='glium::texture::UnsignedTexture3d'>UnsignedTexture3d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    DepthTexture3d(&amp;'a <a class='struct' href='../../glium/texture/struct.DepthTexture3d.html' title='glium::texture::DepthTexture3d'>DepthTexture3d</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    Texture1dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.Texture1dArray.html' title='glium::texture::Texture1dArray'>Texture1dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    CompressedTexture1dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.CompressedTexture1dArray.html' title='glium::texture::CompressedTexture1dArray'>CompressedTexture1dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    IntegralTexture1dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.IntegralTexture1dArray.html' title='glium::texture::IntegralTexture1dArray'>IntegralTexture1dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    UnsignedTexture1dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.UnsignedTexture1dArray.html' title='glium::texture::UnsignedTexture1dArray'>UnsignedTexture1dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    DepthTexture1dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.DepthTexture1dArray.html' title='glium::texture::DepthTexture1dArray'>DepthTexture1dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    Texture2dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.Texture2dArray.html' title='glium::texture::Texture2dArray'>Texture2dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    CompressedTexture2dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.CompressedTexture2dArray.html' title='glium::texture::CompressedTexture2dArray'>CompressedTexture2dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    IntegralTexture2dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.IntegralTexture2dArray.html' title='glium::texture::IntegralTexture2dArray'>IntegralTexture2dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    UnsignedTexture2dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.UnsignedTexture2dArray.html' title='glium::texture::UnsignedTexture2dArray'>UnsignedTexture2dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+    DepthTexture2dArray(&amp;'a <a class='struct' href='../../glium/texture/struct.DepthTexture2dArray.html' title='glium::texture::DepthTexture2dArray'>DepthTexture2dArray</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../glium/uniforms/struct.SamplerBehavior.html' title='glium::uniforms::SamplerBehavior'>SamplerBehavior</a>&gt;),
+}</pre><div class='docblock'><p>Represents a value to bind to a uniform.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.SignedInt'><a class='stability Unstable' title='Unstable'></a><code>SignedInt</code></td><td></td></tr><tr><td id='variant.UnsignedInt'><a class='stability Unstable' title='Unstable'></a><code>UnsignedInt</code></td><td></td></tr><tr><td id='variant.Float'><a class='stability Unstable' title='Unstable'></a><code>Float</code></td><td></td></tr><tr><td id='variant.Mat2'><a class='stability Unstable' title='Unstable'></a><code>Mat2</code></td><td><div class='docblock'><p>2x2 column-major matrix.</p>
+</div></td></tr><tr><td id='variant.Mat3'><a class='stability Unstable' title='Unstable'></a><code>Mat3</code></td><td><div class='docblock'><p>3x3 column-major matrix.</p>
+</div></td></tr><tr><td id='variant.Mat4'><a class='stability Unstable' title='Unstable'></a><code>Mat4</code></td><td><div class='docblock'><p>4x4 column-major matrix.</p>
+</div></td></tr><tr><td id='variant.Vec2'><a class='stability Unstable' title='Unstable'></a><code>Vec2</code></td><td></td></tr><tr><td id='variant.Vec3'><a class='stability Unstable' title='Unstable'></a><code>Vec3</code></td><td></td></tr><tr><td id='variant.Vec4'><a class='stability Unstable' title='Unstable'></a><code>Vec4</code></td><td></td></tr><tr><td id='variant.Texture1d'><a class='stability Unstable' title='Unstable'></a><code>Texture1d</code></td><td></td></tr><tr><td id='variant.CompressedTexture1d'><a class='stability Unstable' title='Unstable'></a><code>CompressedTexture1d</code></td><td></td></tr><tr><td id='variant.IntegralTexture1d'><a class='stability Unstable' title='Unstable'></a><code>IntegralTexture1d</code></td><td></td></tr><tr><td id='variant.UnsignedTexture1d'><a class='stability Unstable' title='Unstable'></a><code>UnsignedTexture1d</code></td><td></td></tr><tr><td id='variant.DepthTexture1d'><a class='stability Unstable' title='Unstable'></a><code>DepthTexture1d</code></td><td></td></tr><tr><td id='variant.Texture2d'><a class='stability Unstable' title='Unstable'></a><code>Texture2d</code></td><td></td></tr><tr><td id='variant.CompressedTexture2d'><a class='stability Unstable' title='Unstable'></a><code>CompressedTexture2d</code></td><td></td></tr><tr><td id='variant.IntegralTexture2d'><a class='stability Unstable' title='Unstable'></a><code>IntegralTexture2d</code></td><td></td></tr><tr><td id='variant.UnsignedTexture2d'><a class='stability Unstable' title='Unstable'></a><code>UnsignedTexture2d</code></td><td></td></tr><tr><td id='variant.DepthTexture2d'><a class='stability Unstable' title='Unstable'></a><code>DepthTexture2d</code></td><td></td></tr><tr><td id='variant.Texture3d'><a class='stability Unstable' title='Unstable'></a><code>Texture3d</code></td><td></td></tr><tr><td id='variant.CompressedTexture3d'><a class='stability Unstable' title='Unstable'></a><code>CompressedTexture3d</code></td><td></td></tr><tr><td id='variant.IntegralTexture3d'><a class='stability Unstable' title='Unstable'></a><code>IntegralTexture3d</code></td><td></td></tr><tr><td id='variant.UnsignedTexture3d'><a class='stability Unstable' title='Unstable'></a><code>UnsignedTexture3d</code></td><td></td></tr><tr><td id='variant.DepthTexture3d'><a class='stability Unstable' title='Unstable'></a><code>DepthTexture3d</code></td><td></td></tr><tr><td id='variant.Texture1dArray'><a class='stability Unstable' title='Unstable'></a><code>Texture1dArray</code></td><td></td></tr><tr><td id='variant.CompressedTexture1dArray'><a class='stability Unstable' title='Unstable'></a><code>CompressedTexture1dArray</code></td><td></td></tr><tr><td id='variant.IntegralTexture1dArray'><a class='stability Unstable' title='Unstable'></a><code>IntegralTexture1dArray</code></td><td></td></tr><tr><td id='variant.UnsignedTexture1dArray'><a class='stability Unstable' title='Unstable'></a><code>UnsignedTexture1dArray</code></td><td></td></tr><tr><td id='variant.DepthTexture1dArray'><a class='stability Unstable' title='Unstable'></a><code>DepthTexture1dArray</code></td><td></td></tr><tr><td id='variant.Texture2dArray'><a class='stability Unstable' title='Unstable'></a><code>Texture2dArray</code></td><td></td></tr><tr><td id='variant.CompressedTexture2dArray'><a class='stability Unstable' title='Unstable'></a><code>CompressedTexture2dArray</code></td><td></td></tr><tr><td id='variant.IntegralTexture2dArray'><a class='stability Unstable' title='Unstable'></a><code>IntegralTexture2dArray</code></td><td></td></tr><tr><td id='variant.UnsignedTexture2dArray'><a class='stability Unstable' title='Unstable'></a><code>UnsignedTexture2dArray</code></td><td></td></tr><tr><td id='variant.DepthTexture2dArray'><a class='stability Unstable' title='Unstable'></a><code>DepthTexture2dArray</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unstable' title='Unstable'></a><code>impl&lt;'a&gt; <a class='enum' href='../../glium/uniforms/enum.UniformValue.html' title='glium::uniforms::UniformValue'>UniformValue</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.is_usable_with' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.is_usable_with' class='fnname'>is_usable_with</a>(&amp;self, ty: &amp;<a class='enum' href='../../glium/uniforms/enum.UniformType.html' title='glium::uniforms::UniformType'>UniformType</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns true if this value can be used with a uniform of the given type.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>impl&lt;'a&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Show.html' title='core::fmt::Show'>Show</a> for <a class='enum' href='../../glium/uniforms/enum.UniformValue.html' title='glium::uniforms::UniformValue'>UniformValue</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Experimental' title='Experimental'></a><code>impl&lt;'a&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/kinds/trait.Copy.html' title='core::kinds::Copy'>Copy</a> for <a class='enum' href='../../glium/uniforms/enum.UniformValue.html' title='glium::uniforms::UniformValue'>UniformValue</a>&lt;'a&gt;</code></h3><div class='impl-items'></div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;'a&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../glium/uniforms/enum.UniformValue.html' title='glium::uniforms::UniformValue'>UniformValue</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../glium/uniforms/enum.UniformValue.html' title='glium::uniforms::UniformValue'>UniformValue</a>&lt;'a&gt;</code></h4>
+<h4 id='method.clone_from' class='tymethod'><a class='stability Unstable' title='Unstable: this function is rarely used'></a><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "glium";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

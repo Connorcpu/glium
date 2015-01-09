@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `TextureSurface` struct in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, TextureSurface">
+
+    <title>glium::texture::TextureSurface - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>glium</a>::<wbr><a href='index.html'>texture</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.CompressedTexture1d.html'>CompressedTexture1d</a><a class='struct ' href='struct.CompressedTexture1dArray.html'>CompressedTexture1dArray</a><a class='struct ' href='struct.CompressedTexture2d.html'>CompressedTexture2d</a><a class='struct ' href='struct.CompressedTexture2dArray.html'>CompressedTexture2dArray</a><a class='struct ' href='struct.CompressedTexture3d.html'>CompressedTexture3d</a><a class='struct ' href='struct.DepthStencilTexture1d.html'>DepthStencilTexture1d</a><a class='struct ' href='struct.DepthStencilTexture1dArray.html'>DepthStencilTexture1dArray</a><a class='struct ' href='struct.DepthStencilTexture2d.html'>DepthStencilTexture2d</a><a class='struct ' href='struct.DepthStencilTexture2dArray.html'>DepthStencilTexture2dArray</a><a class='struct ' href='struct.DepthStencilTexture3d.html'>DepthStencilTexture3d</a><a class='struct ' href='struct.DepthTexture1d.html'>DepthTexture1d</a><a class='struct ' href='struct.DepthTexture1dArray.html'>DepthTexture1dArray</a><a class='struct ' href='struct.DepthTexture2d.html'>DepthTexture2d</a><a class='struct ' href='struct.DepthTexture2dArray.html'>DepthTexture2dArray</a><a class='struct ' href='struct.DepthTexture3d.html'>DepthTexture3d</a><a class='struct ' href='struct.IntegralTexture1d.html'>IntegralTexture1d</a><a class='struct ' href='struct.IntegralTexture1dArray.html'>IntegralTexture1dArray</a><a class='struct ' href='struct.IntegralTexture2d.html'>IntegralTexture2d</a><a class='struct ' href='struct.IntegralTexture2dArray.html'>IntegralTexture2dArray</a><a class='struct ' href='struct.IntegralTexture3d.html'>IntegralTexture3d</a><a class='struct ' href='struct.PixelBuffer.html'>PixelBuffer</a><a class='struct ' href='struct.StencilTexture1d.html'>StencilTexture1d</a><a class='struct ' href='struct.StencilTexture1dArray.html'>StencilTexture1dArray</a><a class='struct ' href='struct.StencilTexture2d.html'>StencilTexture2d</a><a class='struct ' href='struct.StencilTexture2dArray.html'>StencilTexture2dArray</a><a class='struct ' href='struct.StencilTexture3d.html'>StencilTexture3d</a><a class='struct ' href='struct.Texture1d.html'>Texture1d</a><a class='struct ' href='struct.Texture1dArray.html'>Texture1dArray</a><a class='struct ' href='struct.Texture2d.html'>Texture2d</a><a class='struct ' href='struct.Texture2dArray.html'>Texture2dArray</a><a class='struct ' href='struct.Texture3d.html'>Texture3d</a><a class='struct current' href='struct.TextureSurface.html'>TextureSurface</a><a class='struct ' href='struct.UnsignedTexture1d.html'>UnsignedTexture1d</a><a class='struct ' href='struct.UnsignedTexture1dArray.html'>UnsignedTexture1dArray</a><a class='struct ' href='struct.UnsignedTexture2d.html'>UnsignedTexture2d</a><a class='struct ' href='struct.UnsignedTexture2dArray.html'>UnsignedTexture2dArray</a><a class='struct ' href='struct.UnsignedTexture3d.html'>UnsignedTexture3d</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.ClientFormat.html'>ClientFormat</a><a class='enum ' href='enum.CompressedFormat.html'>CompressedFormat</a><a class='enum ' href='enum.DepthFormat.html'>DepthFormat</a><a class='enum ' href='enum.DepthStencilFormat.html'>DepthStencilFormat</a><a class='enum ' href='enum.StencilFormat.html'>StencilFormat</a><a class='enum ' href='enum.TextureFormat.html'>TextureFormat</a><a class='enum ' href='enum.UncompressedFloatFormat.html'>UncompressedFloatFormat</a><a class='enum ' href='enum.UncompressedIntFormat.html'>UncompressedIntFormat</a><a class='enum ' href='enum.UncompressedUintFormat.html'>UncompressedUintFormat</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.PixelValue.html'>PixelValue</a><a class='trait ' href='trait.Texture.html'>Texture</a><a class='trait ' href='trait.Texture1dData.html'>Texture1dData</a><a class='trait ' href='trait.Texture2dData.html'>Texture2dData</a><a class='trait ' href='trait.Texture3dData.html'>Texture3dData</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>glium</a>::<wbr><a href='index.html'>texture</a>::<wbr><a class='struct' href=''>TextureSurface</a><wbr><a class='stability Unstable' title=''>Unstable</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-45704' href='../../src/glium/texture/mod.rs.html#295'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct TextureSurface&lt;'a&gt;(_);</pre><div class='docblock'><p>Struct that allows you to draw on a texture.</p>
+
+<p>To obtain such an object, call <code>texture.as_surface()</code>.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unstable' title='Unstable'></a><code>impl&lt;'a&gt; <a class='trait' href='../../glium/trait.Surface.html' title='glium::Surface'>Surface</a> for <a class='struct' href='../../glium/texture/struct.TextureSurface.html' title='glium::texture::TextureSurface'>TextureSurface</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.clear_color' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.clear_color' class='fnname'>clear_color</a>(&amp;mut self, red: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, green: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, blue: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, alpha: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>)</code></h4>
+<h4 id='method.clear_depth' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.clear_depth' class='fnname'>clear_depth</a>(&amp;mut self, value: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>)</code></h4>
+<h4 id='method.clear_stencil' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.clear_stencil' class='fnname'>clear_stencil</a>(&amp;mut self, value: <a href='http://doc.rust-lang.org/nightly/std/primitive.int.html'>int</a>)</code></h4>
+<h4 id='method.get_dimensions' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.get_dimensions' class='fnname'>get_dimensions</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.uint.html'>uint</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.uint.html'>uint</a>)</a></code></h4>
+<h4 id='method.get_depth_buffer_bits' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.get_depth_buffer_bits' class='fnname'>get_depth_buffer_bits</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>&gt;</code></h4>
+<h4 id='method.get_stencil_buffer_bits' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.get_stencil_buffer_bits' class='fnname'>get_stencil_buffer_bits</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>&gt;</code></h4>
+<h4 id='method.draw' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.draw' class='fnname'>draw</a>&lt;'b, 'v, V, I, ID, U&gt;(&amp;mut self, vb: V, ib: &amp;I, program: &amp;<a class='struct' href='../../glium/struct.Program.html' title='glium::Program'>Program</a>, uniforms: U, draw_parameters: &amp;<a class='struct' href='../../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a>) <span class='where'>where I: <a class='trait' href='../../glium/index_buffer/trait.ToIndicesSource.html' title='glium::index_buffer::ToIndicesSource'>ToIndicesSource</a>&lt;ID&gt;, U: <a class='trait' href='../../glium/uniforms/trait.Uniforms.html' title='glium::uniforms::Uniforms'>Uniforms</a>, V: <a class='trait' href='../../glium/vertex_buffer/trait.IntoVerticesSource.html' title='glium::vertex_buffer::IntoVerticesSource'>IntoVerticesSource</a>&lt;'v&gt;</span></code></h4>
+<h4 id='method.get_blit_helper' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.get_blit_helper' class='fnname'>get_blit_helper</a>(&amp;self) -&gt; BlitHelper</code></h4>
+<h4 id='method.has_depth_buffer' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.has_depth_buffer' class='fnname'>has_depth_buffer</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.has_stencil_buffer' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.has_stencil_buffer' class='fnname'>has_stencil_buffer</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.blit_color' class='method'><a class='stability Experimental' title='Experimental: The name will likely change'></a><code>fn <a href='#method.blit_color' class='fnname'>blit_color</a>&lt;S&gt;(&amp;self, source_rect: &amp;<a class='struct' href='../../glium/struct.Rect.html' title='glium::Rect'>Rect</a>, target: &amp;S, target_rect: &amp;<a class='struct' href='../../glium/struct.Rect.html' title='glium::Rect'>Rect</a>, filter: <a class='enum' href='../../glium/uniforms/enum.MagnifySamplerFilter.html' title='glium::uniforms::MagnifySamplerFilter'>MagnifySamplerFilter</a>) <span class='where'>where S: <a class='trait' href='../../glium/trait.Surface.html' title='glium::Surface'>Surface</a></span></code></h4>
+<h4 id='method.blit_whole_color_to' class='method'><a class='stability Experimental' title='Experimental: The name will likely change'></a><code>fn <a href='#method.blit_whole_color_to' class='fnname'>blit_whole_color_to</a>&lt;S&gt;(&amp;self, target: &amp;S, target_rect: &amp;<a class='struct' href='../../glium/struct.Rect.html' title='glium::Rect'>Rect</a>, filter: <a class='enum' href='../../glium/uniforms/enum.MagnifySamplerFilter.html' title='glium::uniforms::MagnifySamplerFilter'>MagnifySamplerFilter</a>) <span class='where'>where S: <a class='trait' href='../../glium/trait.Surface.html' title='glium::Surface'>Surface</a></span></code></h4>
+<h4 id='method.fill' class='method'><a class='stability Experimental' title='Experimental: The name will likely change'></a><code>fn <a href='#method.fill' class='fnname'>fill</a>&lt;S&gt;(&amp;self, target: &amp;S, filter: <a class='enum' href='../../glium/uniforms/enum.MagnifySamplerFilter.html' title='glium::uniforms::MagnifySamplerFilter'>MagnifySamplerFilter</a>) <span class='where'>where S: <a class='trait' href='../../glium/trait.Surface.html' title='glium::Surface'>Surface</a></span></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "glium";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

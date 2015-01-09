@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `DepthFunction` enum in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, DepthFunction">
+
+    <title>glium::DepthFunction - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>glium</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='debug/index.html'>debug</a><a class='mod ' href='framebuffer/index.html'>framebuffer</a><a class='mod ' href='index_buffer/index.html'>index_buffer</a><a class='mod ' href='render_buffer/index.html'>render_buffer</a><a class='mod ' href='texture/index.html'>texture</a><a class='mod ' href='uniforms/index.html'>uniforms</a><a class='mod ' href='vertex_buffer/index.html'>vertex_buffer</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Display.html'>Display</a><a class='struct ' href='struct.DrawParameters.html'>DrawParameters</a><a class='struct ' href='struct.Frame.html'>Frame</a><a class='struct ' href='struct.Program.html'>Program</a><a class='struct ' href='struct.Rect.html'>Rect</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.BackfaceCullingMode.html'>BackfaceCullingMode</a><a class='enum ' href='enum.BlendingFunction.html'>BlendingFunction</a><a class='enum current' href='enum.DepthFunction.html'>DepthFunction</a><a class='enum ' href='enum.GliumCreationError.html'>GliumCreationError</a><a class='enum ' href='enum.PolygonMode.html'>PolygonMode</a><a class='enum ' href='enum.ProgramCreationError.html'>ProgramCreationError</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.DisplayBuild.html'>DisplayBuild</a><a class='trait ' href='trait.Surface.html'>Surface</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>glium</a>::<wbr><a class='enum' href=''>DepthFunction</a><wbr><a class='stability Unstable' title=''>Unstable</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-196136' href='../src/glium/lib.rs.html#332-360'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum DepthFunction {
+    Ignore,
+    Overwrite,
+    IfEqual,
+    IfNotEqual,
+    IfMore,
+    IfMoreOrEqual,
+    IfLess,
+    IfLessOrEqual,
+}</pre><div class='docblock'><p>The function that the GPU will use to determine whether to write over an existing pixel
+on the target.</p>
+
+<h1 id="depth-buffers" class='section-header'><a
+                           href="#depth-buffers">Depth buffers</a></h1>
+<p>After the fragment shader has been run, the GPU maps the output Z coordinates to the depth
+range (that you can specify in the draw parameters) in order to obtain the depth value in
+in window coordinates. This depth value is always between <code>0.0</code> and <code>1.0</code>.</p>
+
+<p>In addition to the buffer where pixel colors are stored, you can also have a buffer
+which contains the depth value of each pixel. Whenever the GPU tries to write a pixel,
+it will first compare the depth value of the pixel to be written with the depth value that
+is stored at this location.</p>
+
+<p>If you don&#39;t have a depth buffer available, you can only pass <code>Overwrite</code>. Glium detects if
+you pass any other value and reports an error.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Ignore'><a class='stability Unstable' title='Unstable'></a><code>Ignore</code></td><td><div class='docblock'><p>Never replace the target pixel.</p>
+
+<p>This option doesn&#39;t really make sense, but is here for completeness.</p>
+</div></td></tr><tr><td id='variant.Overwrite'><a class='stability Unstable' title='Unstable'></a><code>Overwrite</code></td><td><div class='docblock'><p>Always replace the target pixel.</p>
+
+<p>This is the default mode.</p>
+</div></td></tr><tr><td id='variant.IfEqual'><a class='stability Unstable' title='Unstable'></a><code>IfEqual</code></td><td><div class='docblock'><p>Replace if the z-value of the source is equal to the destination.</p>
+</div></td></tr><tr><td id='variant.IfNotEqual'><a class='stability Unstable' title='Unstable'></a><code>IfNotEqual</code></td><td><div class='docblock'><p>Replace if the z-value of the source is different than the destination.</p>
+</div></td></tr><tr><td id='variant.IfMore'><a class='stability Unstable' title='Unstable'></a><code>IfMore</code></td><td><div class='docblock'><p>Replace if the z-value of the source is more than the destination.</p>
+</div></td></tr><tr><td id='variant.IfMoreOrEqual'><a class='stability Unstable' title='Unstable'></a><code>IfMoreOrEqual</code></td><td><div class='docblock'><p>Replace if the z-value of the source is more or equal to the destination.</p>
+</div></td></tr><tr><td id='variant.IfLess'><a class='stability Unstable' title='Unstable'></a><code>IfLess</code></td><td><div class='docblock'><p>Replace if the z-value of the source is less than the destination.</p>
+</div></td></tr><tr><td id='variant.IfLessOrEqual'><a class='stability Unstable' title='Unstable'></a><code>IfLessOrEqual</code></td><td><div class='docblock'><p>Replace if the z-value of the source is less or equal to the destination.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unstable' title='Unstable'></a><code>impl <a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a></code></h3><div class='impl-items'><h4 id='method.requires_depth_buffer' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#method.requires_depth_buffer' class='fnname'>requires_depth_buffer</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns true if the function requires a depth buffer to be used.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a></code></h3><div class='impl-items'><h4 id='method.assert_receiver_is_total_eq' class='tymethod'><a class='stability Experimental' title='Experimental'></a><code>fn <a href='#tymethod.assert_receiver_is_total_eq' class='fnname'>assert_receiver_is_total_eq</a>(&amp;self)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Show.html' title='core::fmt::Show'>Show</a> for <a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Experimental' title='Experimental'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/kinds/trait.Copy.html' title='core::kinds::Copy'>Copy</a> for <a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a></code></h3><div class='impl-items'></div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a></code></h4>
+<h4 id='method.clone_from' class='tymethod'><a class='stability Unstable' title='Unstable: this function is rarely used'></a><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "glium";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

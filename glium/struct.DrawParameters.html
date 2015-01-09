@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `DrawParameters` struct in crate `glium`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, DrawParameters">
+
+    <title>glium::DrawParameters - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>glium</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='debug/index.html'>debug</a><a class='mod ' href='framebuffer/index.html'>framebuffer</a><a class='mod ' href='index_buffer/index.html'>index_buffer</a><a class='mod ' href='render_buffer/index.html'>render_buffer</a><a class='mod ' href='texture/index.html'>texture</a><a class='mod ' href='uniforms/index.html'>uniforms</a><a class='mod ' href='vertex_buffer/index.html'>vertex_buffer</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Display.html'>Display</a><a class='struct current' href='struct.DrawParameters.html'>DrawParameters</a><a class='struct ' href='struct.Frame.html'>Frame</a><a class='struct ' href='struct.Program.html'>Program</a><a class='struct ' href='struct.Rect.html'>Rect</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.BackfaceCullingMode.html'>BackfaceCullingMode</a><a class='enum ' href='enum.BlendingFunction.html'>BlendingFunction</a><a class='enum ' href='enum.DepthFunction.html'>DepthFunction</a><a class='enum ' href='enum.GliumCreationError.html'>GliumCreationError</a><a class='enum ' href='enum.PolygonMode.html'>PolygonMode</a><a class='enum ' href='enum.ProgramCreationError.html'>ProgramCreationError</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.DisplayBuild.html'>DisplayBuild</a><a class='trait ' href='trait.Surface.html'>Surface</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>glium</a>::<wbr><a class='struct' href=''>DrawParameters</a><wbr><a class='stability Unstable' title=''>Unstable</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-197136' href='../src/glium/lib.rs.html#450-519'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct DrawParameters {
+    pub depth_function: <a class='enum' href='../glium/enum.DepthFunction.html' title='glium::DepthFunction'>DepthFunction</a>,
+    pub depth_range: <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>)</a>,
+    pub blending_function: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../glium/enum.BlendingFunction.html' title='glium::BlendingFunction'>BlendingFunction</a>&gt;,
+    pub line_width: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>&gt;,
+    pub backface_culling: <a class='enum' href='../glium/enum.BackfaceCullingMode.html' title='glium::BackfaceCullingMode'>BackfaceCullingMode</a>,
+    pub polygon_mode: <a class='enum' href='../glium/enum.PolygonMode.html' title='glium::PolygonMode'>PolygonMode</a>,
+    pub multisampling: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub dithering: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub viewport: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../glium/struct.Rect.html' title='glium::Rect'>Rect</a>&gt;,
+}</pre><div class='docblock'><p>Represents the parameters to use when drawing.</p>
+
+<p>Example:</p>
+<pre class='rust '>
+<span class='kw'>let</span> <span class='ident'>params</span> <span class='op'>=</span> <span class='ident'>glium</span>::<span class='ident'>DrawParameters</span> {
+    <span class='ident'>depth_function</span>: <span class='ident'>glium</span>::<span class='ident'>DepthFunction</span>::<span class='ident'>IfLess</span>,
+    .. <span class='ident'>std</span>::<span class='ident'>default</span>::<span class='ident'>Default</span>::<span class='ident'>default</span>()
+};
+</pre>
+</div><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.depth_function'><a class='stability Unstable' title='Unstable'></a><code>depth_function</code></td><td><div class='docblock'><p>The function that the GPU will use to determine whether to write over an existing pixel
+on the target.</p>
+
+<p>See the documentation of <code>DepthFunction</code> for more details.</p>
+
+<p>The default is <code>Overwrite</code>.</p>
+</div></td></tr><tr><td id='structfield.depth_range'><a class='stability Unstable' title='Unstable'></a><code>depth_range</code></td><td><div class='docblock'><p>The range of Z coordinates in surface coordinates.</p>
+
+<p>Just like OpenGL turns X and Y coordinates between <code>-1.0</code> and <code>1.0</code> into surface
+coordinates, it will also map your Z coordinates to a certain range which you can
+specify here.</p>
+
+<p>The two values must be between <code>0.0</code> and <code>1.0</code>, anything outside this range will result
+in a panic. By default the depth range is <code>(0.0, 1.0)</code>.</p>
+
+<p>The first value of the tuple must be the &quot;near&quot; value, where <code>-1.0</code> will be mapped.
+The second value must be the &quot;far&quot; value, where <code>1.0</code> will be mapped.
+It is possible for the &quot;near&quot; value to be greater than the &quot;far&quot; value.</p>
+</div></td></tr><tr><td id='structfield.blending_function'><a class='stability Unstable' title='Unstable'></a><code>blending_function</code></td><td><div class='docblock'><p>The function that the GPU will use to merge the existing pixel with the pixel that is
+being written.</p>
+
+<p><code>None</code> means &quot;don&#39;t care&quot; (usually when you know that the alpha is always 1).</p>
+</div></td></tr><tr><td id='structfield.line_width'><a class='stability Unstable' title='Unstable'></a><code>line_width</code></td><td><div class='docblock'><p>Width in pixels of the lines to draw when drawing lines.</p>
+
+<p><code>None</code> means &quot;don&#39;t care&quot;. Use this when you don&#39;t draw lines.</p>
+</div></td></tr><tr><td id='structfield.backface_culling'><a class='stability Unstable' title='Unstable'></a><code>backface_culling</code></td><td><div class='docblock'><p>Whether or not the GPU should filter out some faces.</p>
+
+<p>After the vertex shader stage, the GPU will try to remove the faces that aren&#39;t facing
+the camera.</p>
+
+<p>See the documentation of <code>BackfaceCullingMode</code> for more infos.</p>
+</div></td></tr><tr><td id='structfield.polygon_mode'><a class='stability Unstable' title='Unstable'></a><code>polygon_mode</code></td><td><div class='docblock'><p>Sets how to render polygons. The default value is <code>Fill</code>.</p>
+
+<p>See the documentation of <code>PolygonMode</code> for more infos.</p>
+</div></td></tr><tr><td id='structfield.multisampling'><a class='stability Unstable' title='Unstable'></a><code>multisampling</code></td><td><div class='docblock'><p>Whether multisample antialiasing (MSAA) should be used. Default value is <code>true</code>.</p>
+
+<p>Note that you will need to set the appropriate option when creating the window.
+The recommended way to do is to leave this to <code>true</code>, and adjust the option when
+creating the window.</p>
+</div></td></tr><tr><td id='structfield.dithering'><a class='stability Unstable' title='Unstable'></a><code>dithering</code></td><td><div class='docblock'><p>Whether dithering is activated. Default value is <code>true</code>.</p>
+
+<p>Dithering will smoothen the transition between colors in your color buffer.</p>
+</div></td></tr><tr><td id='structfield.viewport'><a class='stability Unstable' title='Unstable'></a><code>viewport</code></td><td><div class='docblock'><p>Specifies the viewport to use when drawing.</p>
+
+<p>The x and y positions of your vertices are mapped to the viewport so that <code>(-1, -1)</code>
+corresponds to the lower-left hand corner and <code>(1, 1)</code> corresponds to the top-right
+hand corner. Any pixel outside of the viewport is discarded.</p>
+
+<p>You can specify a viewport greater than the target if you want to stretch the image.</p>
+
+<p><code>None</code> means &quot;use the whole surface&quot;.</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a></code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Show.html' title='core::fmt::Show'>Show</a> for <a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Unstable' title='Unstable: I/O and core have yet to be reconciled'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Experimental' title='Experimental'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/kinds/trait.Copy.html' title='core::kinds::Copy'>Copy</a> for <a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a></code></h3><div class='impl-items'></div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../glium/struct.DrawParameters.html' title='glium::DrawParameters'>DrawParameters</a></code></h4>
+<h4 id='method.clone_from' class='tymethod'><a class='stability Unstable' title='Unstable: this function is rarely used'></a><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "glium";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
